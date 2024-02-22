@@ -1,0 +1,81 @@
+table 'OPL_R DIM_LeerlingNP'
+	lineageTag: 40c96b02-dcd8-4066-900a-c9c030cb0da8
+
+	column LeerlingID
+		dataType: string
+		lineageTag: 41e46dbc-dcc9-436f-966e-ee9d404191c0
+		summarizeBy: none
+		sourceColumn: LeerlingID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeerlingGeslacht
+		dataType: string
+		lineageTag: dd3332b9-22a8-43fb-a84d-bbdd687dad3c
+		summarizeBy: none
+		sourceColumn: LeerlingGeslacht
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeerlingGeslachtTekst
+		dataType: string
+		lineageTag: 5251b5e4-5dce-493e-a506-a3333f004fe3
+		summarizeBy: none
+		sourceColumn: LeerlingGeslachtTekst
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeerlingGeboortedatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c62f6e4d-e337-476b-9b1d-23e47d8489f9
+		summarizeBy: none
+		sourceColumn: LeerlingGeboortedatum
+
+		variation Variatie
+			isDefault
+			relationship: c03d0421-2abe-4b05-bcde-fbccce46ab60
+			defaultHierarchy: LocalDateTable_029e66c2-4aeb-4aec-b57e-c5193d273493.Datumhiërarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LeerlingVveIndicatie
+		dataType: string
+		lineageTag: 4661e2d2-9f7e-48e1-a967-6bbed7607a0c
+		summarizeBy: none
+		sourceColumn: LeerlingVveIndicatie
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeerlingIsBekendBijBRON
+		dataType: int64
+		formatString: 0
+		lineageTag: 96c2b19f-e62f-44fe-966b-e221da9c48a8
+		summarizeBy: sum
+		sourceColumn: LeerlingIsBekendBijBRON
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeerlingWeging
+		dataType: double
+		lineageTag: 46cf2ef0-a933-47df-b190-c3e51d6434c4
+		summarizeBy: sum
+		sourceColumn: LeerlingWeging
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'OPL_R DIM_LeerlingNP' = m
+		mode: import
+		source =
+				let
+				    Bron = Sql.Database("sql-boor-dwhprod.database.windows.net", "dwhprod"),
+				    OPL_R_DIM_LeerlingNP = Bron{[Schema="OPL_R",Item="DIM_LeerlingNP"]}[Data]
+				in
+				    OPL_R_DIM_LeerlingNP
+
+	annotation PBI_ResultType = Table
+

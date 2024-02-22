@@ -1,0 +1,5 @@
+relationship c03d0421-2abe-4b05-bcde-fbccce46ab60
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'OPL_R DIM_LeerlingNP'.LeerlingGeboortedatum
+	toColumn: LocalDateTable_029e66c2-4aeb-4aec-b57e-c5193d273493.Date
+

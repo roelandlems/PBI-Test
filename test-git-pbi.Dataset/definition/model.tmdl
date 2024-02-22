@@ -1,0 +1,20 @@
+model Model
+	culture: nl-NL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: nl-NL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["OPL_R DIM_LeerlingNP"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.126.927.0 (24.02)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'OPL_R DIM_LeerlingNP'
+ref table DateTableTemplate_0188c936-533b-4253-b816-ca5f871a6e33
+ref table LocalDateTable_029e66c2-4aeb-4aec-b57e-c5193d273493
+

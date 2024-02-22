@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Pagina 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"950a139a3c840e702447\",\"layouts\":[{\"id\":0,\"position\":{\"x\":91.33047210300428,\"y\":63.17596566523605,\"z\":0,\"width\":279.48497854077254,\"height\":280.17167381974247,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"OPL_R DIM_LeerlingNP.LeerlingGeslacht\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(OPL_R DIM_LeerlingNP.LeerlingID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"OPL_R DIM_LeerlingNP\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"LeerlingGeslacht\"},\"Name\":\"OPL_R DIM_LeerlingNP.LeerlingGeslacht\",\"NativeReferenceName\":\"LeerlingGeslacht\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"LeerlingID\"}},\"Function\":5},\"Name\":\"CountNonNull(OPL_R DIM_LeerlingNP.LeerlingID)\",\"NativeReferenceName\":\"Totaal van LeerlingID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"LeerlingID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.17,
+          "width": 279.48,
+          "x": 91.33,
+          "y": 63.18,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
