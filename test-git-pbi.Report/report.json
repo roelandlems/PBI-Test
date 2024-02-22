@@ -34,6 +34,15 @@
           "x": 91.33,
           "y": 63.18,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"dd3ba2f16beeb7987707\",\"layouts\":[{\"id\":0,\"position\":{\"x\":849.7854077253219,\"y\":63.17596566523605,\"width\":279.48497854077254,\"height\":280.17167381974247,\"z\":1}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"OPL_R DIM_LeerlingNP.LeerlingID\"},{\"queryRef\":\"Sum(OPL_R DIM_LeerlingNP.LeerlingWeging)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"OPL_R DIM_LeerlingNP\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"LeerlingID\"},\"Name\":\"OPL_R DIM_LeerlingNP.LeerlingID\",\"NativeReferenceName\":\"LeerlingID\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"LeerlingWeging\"}},\"Function\":0},\"Name\":\"Sum(OPL_R DIM_LeerlingNP.LeerlingWeging)\",\"NativeReferenceName\":\"Som van LeerlingWeging\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"OPL_R DIM_LeerlingNP\"}},\"Property\":\"LeerlingWeging\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"OPL_R DIM_LeerlingNP\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"LeerlingWeging\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 280.17,
+          "width": 279.48,
+          "x": 849.79,
+          "y": 63.18,
+          "z": 1.00
         }
       ],
       "width": 1280.00
